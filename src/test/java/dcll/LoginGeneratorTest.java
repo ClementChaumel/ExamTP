@@ -30,4 +30,16 @@ public class LoginGeneratorTest {
     public void testGenerateLoginForNomAndPrenomAccent() throws Exception {
         assertEquals("PDUR", generator.generateLoginForNomAndPrenom("Dùrand", "Paul"));
     }
+
+    @Test
+    public void testGenerateLoginForNomAndPrenomNomCourt() throws Exception {
+        assertEquals("PDU", generator.generateLoginForNomAndPrenom("Du", "Paul"));
+    }
+
+    @Test
+    public void testGenerateLoginForNomAndPrenomDeuxieme() throws Exception {
+        assertEquals("JRAL2", generator.generateLoginForNomAndPrenom("Ralling", "John"));
+    }
+
+
 }
